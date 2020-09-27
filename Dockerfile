@@ -22,5 +22,6 @@ RUN echo "y" | sdkmanager "emulator"
 RUN echo "y" | sdkmanager "platforms;android-28"
 RUN echo "y" | sdkmanager "system-images;android-28;default;x86"
 RUN echo "y" | sdkmanager --update
-RUN echo "no" | avdmanager create avd -n default -k "system-images;android-28;default;x86" -d 17
-RUN rm -rf /var/lib/apt/lists/* 
+RUN echo "no" | avdmanager create avd -n emuf -k "system-images;android-28;default;x86" -d 17
+RUN echo "no" | avdmanager create avd -n emus -k "system-images;android-28;default;x86" -d 17
+RUN rm -rf /var/lib/apt/lists/*

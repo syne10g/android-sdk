@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "Starting default emulator"
-$ANDROID_HOME/emulator/emulator @default -no-window -no-audio 2>&1 &
+echo "Starting emuf emulator"
+$ANDROID_HOME/emulator/emulator @emuf -no-window -no-audio 2>&1 &
 
 EMU_BOOTED="no"
 while [[ ${EMU_BOOTED} != *"stopped"* ]]; do
@@ -10,4 +10,16 @@ while [[ ${EMU_BOOTED} != *"stopped"* ]]; do
     EMU_BOOTED=$(adb shell getprop init.svc.bootanim || echo "no")
 done
 
-echo "Emulator booted"
+echo "Emulator emuf booted"
+
+echo "Starting emus emulator"
+$ANDROID_HOME/emulator/emulator @emus -no-window -no-audio 2>&1 &
+
+EMU_BOOTED="no"
+while [[ ${EMU_BOOTED} != *"stopped"* ]]; do
+    echo "Wating for emulator booted..."
+    sleep 5
+    EMU_BOOTED=$(adb shell getprop init.svc.bootanim || echo "no")
+done
+
+echo "Emulator emus booted"
