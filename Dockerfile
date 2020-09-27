@@ -9,18 +9,18 @@ RUN mkdir /opt/android
 
 RUN apt update
 RUN apt install openjdk-8-jdk wget unzip git -y
-RUN chmod a+x /opt/start-default-emulator.sh \
-RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip -qO android-sdk.zip \
-RUN unzip android-sdk.zip -d /opt/android \
-RUN rm android-sdk.zip \
-RUN echo "y" | sdkmanager "tools" \
-RUN echo "y" | sdkmanager "platform-tools" \
-RUN echo "y" | sdkmanager "build-tools;29.0.2" \
-RUN echo "y" | sdkmanager "extras;android;m2repository" \
-RUN echo "y" | sdkmanager "extras;google;m2repository" \
-RUN echo "y" | sdkmanager "emulator" \
-RUN echo "y" | sdkmanager "platforms;android-28" \
-RUN echo "y" | sdkmanager "system-images;android-28;google_apis;x86" \
-RUN echo "y" | sdkmanager --update \
-RUN echo "no" | avdmanager create avd -n default -k "system-images;android-28;google_apis;x86" -d 17 \
+RUN chmod a+x /opt/start-default-emulator.sh
+RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip -qO android-sdk.zip
+RUN unzip android-sdk.zip -d /opt/android
+RUN rm android-sdk.zip
+RUN echo "y" | sdkmanager "tools"
+RUN echo "y" | sdkmanager "platform-tools"
+RUN echo "y" | sdkmanager "build-tools;29.0.2"
+RUN echo "y" | sdkmanager "extras;android;m2repository"
+RUN echo "y" | sdkmanager "extras;google;m2repository"
+RUN echo "y" | sdkmanager "emulator"
+RUN echo "y" | sdkmanager "platforms;android-28"
+RUN echo "y" | sdkmanager "system-images;android-28;google_apis;x86"
+RUN echo "y" | sdkmanager --update
+RUN echo "no" | avdmanager create avd -n default -k "system-images;android-28;google_apis;x86" -d 17
 RUN rm -rf /var/lib/apt/lists/* 
