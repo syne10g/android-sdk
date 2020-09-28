@@ -35,8 +35,9 @@ until [[ "${bootcomplete}" =~ "1" ]]; do
     sleep ${sleeptime}
 done
 
-adb -s emulator-5556 shell su root setprop marathon.serialno 2222222222
-adb -s emulator-5558 shell su root setprop marathon.serialno 3333333333
-adb -s emulator-5560 shell su root setprop marathon.serialno 4444444444
+adb -s emulator-5556 shell su root setprop marathon.serialno 89991111111
+adb -s emulator-5556 shell su root setprop marathon.serialno 89992222222
+adb -s emulator-5558 shell su root setprop marathon.serialno 89993333333
+adb -s emulator-5560 shell su root setprop marathon.serialno 89994444444
 
 echo "Emulators is ready"
