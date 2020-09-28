@@ -25,4 +25,5 @@ RUN echo "y" | sdkmanager --update
 RUN echo "no" | avdmanager create avd -n emuone -k "system-images;android-28;default;x86" -d 17
 RUN echo "no" | avdmanager create avd -n emutwo -k "system-images;android-28;default;x86" -d 17
 RUN echo "no" | avdmanager create avd -n emuthree -k "system-images;android-28;default;x86" -d 17
+RUN echo "no" | avdmanager create avd -n emufour -k "system-images;android-28;default;x86" -d 17
 RUN rm -rf /var/lib/apt/lists/*
