@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Starting emuf emulator"
+echo "Starting emulators"
 
 $ANDROID_HOME/emulator/emulator @emuone -no-boot-anim -no-window -no-audio 2>&1 &
 $ANDROID_HOME/emulator/emulator @emutwo -no-boot-anim -no-window -no-audio 2>&1 &
@@ -16,7 +16,7 @@ sleeptime=10
 maxfail=$((timeout / sleeptime))
 
 until [[ "${bootcomplete}" =~ "1" ]]; do
-    bootcomplete=`adb -s emulator-5558 shell getprop dev.bootcomplete 2>&1 &`
+    bootcomplete=`adb -s emulator-5560 shell getprop dev.bootcomplete 2>&1 &`
     if [[ "${bootcomplete}" =~ "" ]]; then
         ((failcounter += 1))
         adb devices
@@ -35,7 +35,8 @@ until [[ "${bootcomplete}" =~ "1" ]]; do
     sleep ${sleeptime}
 done
 
-adb -s emulator-5556 shell su root setprop marathon.serialno 0000000001
-adb -s emulator-5558 shell su root setprop marathon.serialno 0000000002
+adb -s emulator-5556 shell su root setprop marathon.serialno 2222222222
+adb -s emulator-5558 shell su root setprop marathon.serialno 3333333333
+adb -s emulator-5560 shell su root setprop marathon.serialno 4444444444
 
-echo "Emulator is ready"
+echo "Emulators is ready"
