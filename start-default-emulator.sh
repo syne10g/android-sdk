@@ -2,10 +2,10 @@
 
 echo "Starting emulators"
 
-$ANDROID_HOME/emulator/emulator @emuone -no-boot-anim -no-window -no-audio 2>&1 &
-$ANDROID_HOME/emulator/emulator @emutwo -no-boot-anim -no-window -no-audio 2>&1 &
-$ANDROID_HOME/emulator/emulator @emuthree -no-boot-anim -no-window -no-audio 2>&1 &
-$ANDROID_HOME/emulator/emulator @emufour -no-boot-anim -no-window -no-audio 2>&1 &
+$ANDROID_HOME/emulator/emulator @emuone -skin 1080x1920 -no-boot-anim -no-window -no-audio 2>&1 &
+$ANDROID_HOME/emulator/emulator @emutwo -skin 1080x1920 -no-boot-anim -no-window -no-audio 2>&1 &
+$ANDROID_HOME/emulator/emulator @emuthree -skin 1080x1920 -no-boot-anim -no-window -no-audio 2>&1 &
+$ANDROID_HOME/emulator/emulator @emufour -skin 1080x1920 -no-boot-anim -no-window -no-audio 2>&1 &
 
 set +e
 
