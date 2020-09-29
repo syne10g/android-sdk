@@ -22,9 +22,9 @@ RUN echo "y" | sdkmanager "emulator"
 RUN echo "y" | sdkmanager "platforms;android-29"
 RUN echo "y" | sdkmanager "system-images;android-29;google_apis;x86_64"
 RUN echo "y" | sdkmanager --update
-RUN echo "no" | avdmanager create avd -n emuone --abi google_apis/x86_64 -k "system-images;android-29;google_apis;x86_64 -skin 1080x1920"
-RUN echo "no" | avdmanager create avd -n emutwo --abi google_apis/x86_64 -k "system-images;android-29;google_apis;x86_64 -skin 1080x1920"
-RUN echo "no" | avdmanager create avd -n emuthree --abi google_apis/x86_64 -k "system-images;android-29;google_apis;x86_64 -skin 1080x1920"
-RUN echo "no" | avdmanager create avd -n emufour --abi google_apis/x86_64 -k "system-images;android-29;google_apis;x86_64 -skin 1080x1920"
+RUN echo "no" | avdmanager create avd -n emuone -skin 1080x1920 --abi google_apis/x86_64 -k "system-images;android-29;google_apis;x86_64"
+RUN echo "no" | avdmanager create avd -n emutwo -skin 1080x1920 --abi google_apis/x86_64 -k "system-images;android-29;google_apis;x86_64"
+RUN echo "no" | avdmanager create avd -n emuthree -skin 1080x1920 --abi google_apis/x86_64 -k "system-images;android-29;google_apis;x86_64"
+RUN echo "no" | avdmanager create avd -n emufour -skin 1080x1920 --abi google_apis/x86_64 -k "system-images;android-29;google_apis;x86_64"
 
 RUN rm -rf /var/lib/apt/lists/*
