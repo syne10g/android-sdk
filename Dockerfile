@@ -19,12 +19,12 @@ RUN echo "y" | sdkmanager "build-tools;29.0.2"
 RUN echo "y" | sdkmanager "extras;android;m2repository"
 RUN echo "y" | sdkmanager "extras;google;m2repository"
 RUN echo "y" | sdkmanager "emulator"
-RUN echo "y" | sdkmanager "platforms;android-28"
-RUN echo "y" | sdkmanager "system-images;android-28;google_apis;x86_64"
+RUN echo "y" | sdkmanager "platforms;android-23"
+RUN echo "y" | sdkmanager "system-images;android-23;google_apis;x86_64"
 RUN echo "y" | sdkmanager --update
-RUN echo "no" | avdmanager create avd -n emuone --abi google_apis/x86_64 -k "system-images;android-28;google_apis;x86_64"
-RUN echo "no" | avdmanager create avd -n emutwo --abi google_apis/x86_64 -k "system-images;android-28;google_apis;x86_64"
-RUN echo "no" | avdmanager create avd -n emuthree --abi google_apis/x86_64 -k "system-images;android-28;google_apis;x86_64"
-RUN echo "no" | avdmanager create avd -n emufour --abi google_apis/x86_64 -k "system-images;android-28;google_apis;x86_64"
+RUN echo "no" | avdmanager create avd -n emuone --abi google_apis/x86_64 -k "system-images;android-23;google_apis;x86_64"
+RUN echo "no" | avdmanager create avd -n emutwo --abi google_apis/x86_64 -k "system-images;android-23;google_apis;x86_64"
+RUN echo "no" | avdmanager create avd -n emuthree --abi google_apis/x86_64 -k "system-images;android-23;google_apis;x86_64"
+RUN echo "no" | avdmanager create avd -n emufour --abi google_apis/x86_64 -k "system-images;android-23;google_apis;x86_64"
 
 RUN rm -rf /var/lib/apt/lists/*
