@@ -20,11 +20,11 @@ RUN echo "y" | sdkmanager "extras;android;m2repository"
 RUN echo "y" | sdkmanager "extras;google;m2repository"
 RUN echo "y" | sdkmanager "emulator"
 RUN echo "y" | sdkmanager "platforms;android-28"
-RUN echo "y" | sdkmanager "system-images;android-28;google_apis;x86_64"
+RUN echo "y" | sdkmanager "system-images;android-28;google_apis;x86"
 RUN echo "y" | sdkmanager --update
-RUN echo "no" | avdmanager create avd -n emuone --abi google_apis/x86_64 -k "system-images;android-28;google_apis;x86_64"
-RUN echo "no" | avdmanager create avd -n emutwo --abi google_apis/x86_64 -k "system-images;android-28;google_apis;x86_64"
-RUN echo "no" | avdmanager create avd -n emuthree --abi google_apis/x86_64 -k "system-images;android-28;google_apis;x86_64"
-RUN echo "no" | avdmanager create avd -n emufour --abi google_apis/x86_64 -k "system-images;android-28;google_apis;x86_64"
+RUN echo "no" | avdmanager --verbose create avd --force --name emuone --device "pixel" --package "system-images;android-28;google_apis;x86" --tag "google_apis" --abi "x86"
+RUN echo "no" | avdmanager --verbose create avd --force --name emutwo --device "pixel" --package "system-images;android-28;google_apis;x86" --tag "google_apis" --abi "x86"
+RUN echo "no" | avdmanager --verbose create avd --force --name emuthree --device "pixel" --package "system-images;android-28;google_apis;x86" --tag "google_apis" --abi "x86"
+RUN echo "no" | avdmanager --verbose create avd --force --name emufour --device "pixel" --package "system-images;android-28;google_apis;x86" --tag "google_apis" --abi "x86"
 
 RUN rm -rf /var/lib/apt/lists/*
