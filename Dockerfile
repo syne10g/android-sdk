@@ -26,5 +26,6 @@ RUN echo "no" | avdmanager --verbose create avd --force --name emuone --device "
 RUN echo "no" | avdmanager --verbose create avd --force --name emutwo --device "pixel" --package "system-images;android-27;google_apis;x86" --tag "google_apis" --abi "x86"
 RUN echo "no" | avdmanager --verbose create avd --force --name emuthree --device "pixel" --package "system-images;android-27;google_apis;x86" --tag "google_apis" --abi "x86"
 RUN echo "no" | avdmanager --verbose create avd --force --name emufour --device "pixel" --package "system-images;android-27;google_apis;x86" --tag "google_apis" --abi "x86"
+RUN echo "no" | avdmanager --verbose create avd --force --name emufive --device "pixel" --package "system-images;android-27;google_apis;x86" --tag "google_apis" --abi "x86"
 
 RUN rm -rf /var/lib/apt/lists/*
