@@ -22,10 +22,10 @@ RUN echo "y" | sdkmanager "emulator"
 RUN echo "y" | sdkmanager "platforms;android-29"
 RUN echo "y" | sdkmanager "system-images;android-29;google_apis;x86"
 RUN echo "y" | sdkmanager --update
-RUN echo "no" | avdmanager --verbose create avd --force --name emuone --device "pixel" --package "system-images;android-29;google_apis;x86" --tag "google_apis" --abi "x86"
-RUN echo "no" | avdmanager --verbose create avd --force --name emutwo --device "pixel" --package "system-images;android-29;google_apis;x86" --tag "google_apis" --abi "x86"
-RUN echo "no" | avdmanager --verbose create avd --force --name emuthree --device "pixel" --package "system-images;android-29;google_apis;x86" --tag "google_apis" --abi "x86"
-RUN echo "no" | avdmanager --verbose create avd --force --name emufour --device "pixel" --package "system-images;android-29;google_apis;x86" --tag "google_apis" --abi "x86"
-RUN echo "no" | avdmanager --verbose create avd --force --name emufive --device "pixel" --package "system-images;android-29;google_apis;x86" --tag "google_apis" --abi "x86"
+RUN echo "no" | avdmanager --verbose create avd --force --name emuone --device "5.4in FWVGA" --package "system-images;android-29;google_apis;x86" --tag "google_apis" --abi "x86"
+RUN echo "no" | avdmanager --verbose create avd --force --name emutwo --device "5.4in FWVGA" --package "system-images;android-29;google_apis;x86" --tag "google_apis" --abi "x86"
+RUN echo "no" | avdmanager --verbose create avd --force --name emuthree --device "5.4in FWVGA" --package "system-images;android-29;google_apis;x86" --tag "google_apis" --abi "x86"
+RUN echo "no" | avdmanager --verbose create avd --force --name emufour --device "5.4in FWVGA" --package "system-images;android-29;google_apis;x86" --tag "google_apis" --abi "x86"
+RUN echo "no" | avdmanager --verbose create avd --force --name emufive --device "5.4in FWVGA" --package "system-images;android-29;google_apis;x86" --tag "google_apis" --abi "x86"
 
 RUN rm -rf /var/lib/apt/lists/*
