@@ -28,5 +28,6 @@ RUN echo "no" | avdmanager --verbose create avd --force --name emuthree --device
 RUN echo "no" | avdmanager --verbose create avd --force --name emufour --device "5.4in FWVGA" --package "system-images;android-29;google_apis;x86" --tag "google_apis" --abi "x86"
 RUN echo "no" | avdmanager --verbose create avd --force --name emufive --device "5.4in FWVGA" --package "system-images;android-29;google_apis;x86" --tag "google_apis" --abi "x86"
 RUN echo "no" | avdmanager --verbose create avd --force --name emusix --device "5.4in FWVGA" --package "system-images;android-29;google_apis;x86" --tag "google_apis" --abi "x86"
+RUN echo "no" | avdmanager --verbose create avd --force --name emuseven --device "5.4in FWVGA" --package "system-images;android-29;google_apis;x86" --tag "google_apis" --abi "x86"
 
 RUN rm -rf /var/lib/apt/lists/*
